@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+	--red:#070707;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	background: linear-gradient(to right, #dc0a0a, #3b09a0);
+	font-family: 'Century Gothic';
+}
+
+html{
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scroll-padding-top: 6rem;
+}
+
+section{
+	padding:2rem 9%;
+}
+  
+
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+img{
+	max-width: 85%;
+	border-radius: 100px;
+}
+
+/*menu d navegacion */
+
+
+.navegacion{
+	width: 100%;
+	background: linear-gradient(to right, #dc0a0a, #3b09a0);
+	display: flex;
+	justify-content: center;
+}
+
+.menu{
+	width: 1000px;
+	display: flex;
+	flex-wrap: wrap;
+	height: 90px;
+}
+
+.menu li{
+	flex-basis: 0;
+	flex-grow: 1;
+	border-right: 1px solid #222124;
+	position: relative;
+}
+
+.menu .first-item{
+	border-left: 1px solid #0c0c0c;
+}
+
+.menu li a{
+	display: flex;
+	flex-direction: column;
+	font-size: 50px;
+}
+
+.menu .imagen{
+	position: absolute;
+	bottom: 0;
+	right: 30px;
+	width: 0%;
+	z-index: 20;
+
+	-webkit-transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+    -moz-transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+    -o-transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+    transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+
+    -webkit-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+    -moz-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+    -o-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+    transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(4, 148, 4, 0.51);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(17, 182, 75, 0.51);
+    box-shadow: 0px 0px 5px 0px rgba(51, 197, 15, 0.51);
+}
+
+.menu li a .text-item{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: rgb(0, 0, 0);
+	top: 0%;
+	position: absolute;
+	z-index: 10;
+
+	-webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
+    -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+    -moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+    -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+    transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+    -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+    -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+}
+
+.menu li a .down-item{
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+
+	-webkit-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+    -moz-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+    -o-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+    transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+    -moz-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+    -o-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+}
+
+.menu li:hover .down-item, .menu li:hover .text-item{
+	top: 100%;
+	height: 115%;
+}
+
+.menu li:hover .imagen{
+	width: 100%;
+	right: 0px;
+}
+
+/*3d rotate*/
+.title{
+	width: 100%;
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pepe{
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slider{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+
+}
+
+@keyframes rotate{
+    0%
+    {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100%
+    {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+
+
+}
+
+.slider span{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translatez(350px);
+}
+
+.slider span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    object-fit: cover;
+    transition: 2s;
+}
+.slider span:hover img {
+    transform: translateY(-50px) scale(1.2);
+}
+
+.imgh{
+    position: relative;
+    top: 20px; /* ajustar los valores para mover la imagen */
+    left: -5px;
+    border-radius: 40%;
+    margin: 0px auto;
+    border:2px solid rgb(20, 19, 19);
+    display: block;
+}
+/*mapa*/
+.mapt { 
+    width: 90%;
+    height:400px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 100px;
+}
+
+/*boton de contacto*/
+.button{
+    text-decoration: none;
+    color: #0e0d0d;
+    background-image: url(https://delcuetoyasoc.files.wordpress.com/2010/12/fondo-navidad-rojo-animaciones-nieve-08.gif);
+    padding: 7px 1px 9px;
+    border: 1px solid #11e00a;
+    border-radius: 50px;
+    width: 250px;
+    margin: auto;
+    font-size: 15px;
+}
+
+.button{
+    display: block;
+    text-align: center;
+}
+
+/*menu de comida*/
+
+.heading{
+	text-align: center;
+	font-size: 3.5rem;
+	padding:1rem;
+	color:rgb(12, 12, 12);
+}
+
+.heading span{
+	color:var(--red);
+}
+
+.btn{
+	display: inline-block;
+	padding:.8rem 3rem;
+	border:.2rem solid var(--red);
+	color:var(--red);
+	cursor: pointer;
+	font-size: 1.7rem;
+	border-radius: 50rem;
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+	margin-top: 1rem;
+}
+
+.btn::before{
+	content: '';
+	position: absolute;
+	top:0; right: 0;
+	width:0%;
+	height:100%;
+	background:var(--red);
+	transition: .3s linear;
+	z-index: -1;
+}
+
+.btn:hover::before{
+	width:100%;
+	left: 0;
+}
+
+.btn:hover{
+	color:rgb(219, 28, 194);
+}
+
+.home .image img{
+	width:100%;
+	padding:1rem;
+	animation:float 3s linear infinite;
+}
+
+@keyframes float{
+	0%, 100%{
+	  transform: translateY(0rem);
+	}
+	50%{
+	  transform: translateY(3rem);
+	}
+}
+  
+.home .content h3{
+	font-size: 5rem;
+	color:rgb(6, 6, 6);
+}  
+
+.home .content p{
+	font-size: 1.7rem;
+	color:rgb(1, 0, 0);
+	padding:1rem 0;
+}
+
+.popular .box-container{
+	display: flex;
+	flex-wrap: wrap;
+	gap:1.5rem;
+}
+
+.popular .box-container .box{
+	padding:2rem;
+	background: linear-gradient(to right, #dc0a0a, #3b09a0);
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+	border:.1rem solid rgba(0,0,0,.3);
+	border-radius: 50rem;
+	text-align: center;
+	flex:1 1 30rem;
+	position: relative;
+}
+
+.popular .box-container .box img{
+	height:25rem;
+	object-fit: cover;
+	width:100%;
+	border-radius: 50rem;
+}
+
+.popular .box-container .box .price{
+	position: absolute;
+	top:3rem; left:3rem;
+	background:var(--red);
+	color:#fff;
+	font-size: 2rem;
+	padding:.5rem 1rem;
+	border-radius: 50rem;
+}
+
+.popular .box-container .box h3{
+	color:rgb(9, 138, 9);
+	font-size: 2.5rem;
+	padding-top: 1rem;
+}
+
+
+/* media queries  */
+
+@media(max-width:991px){
+
+	html{
+	  font-size: 55%;
+	}
+  
+	header{
+	  padding:2rem;
+	}
+  
+	section{
+	  padding:2rem;
+	}
+  
+}
+
+@media(max-width:768px){
+
+	#menu-bar{
+	  display: initial;
+	}
+  
+	header .navbar{
+	  position: absolute;
+	  top:100%; left: 0; right:0;
+	  background: #f7f7f7;
+	  border-top: .1rem solid rgba(0,0,0,.1);
+	  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	}
+  
+	header .navbar.active{
+	  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	}
+  
+	header .navbar a{
+	  margin: 1.5rem;
+	  padding:1.5rem;
+	  display: block;
+	  border:.2rem solid rgba(0,0,0,.1);
+	  border-left:.5rem solid var(--red);
+	  background:#fff;
+	}
+  
+}
+
+@media(max-width:450px){
+
+	html{
+	  font-size: 50%;
+	}
+  
+	.order .row form .inputBox input{
+	  width:100%;
+	}
+  
+}
+  
